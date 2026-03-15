@@ -1,1 +1,167 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(255,200,100,0.2));
+      z-index: -1;
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0px 6px 20px rgba(0,0,0,0.3);
+      width: 320px;
+      text-align: center;
+      backdrop-filter: blur(6px);
+    }
+
+    .login-container h2 {
+      margin-bottom: 15px;
+      color: #2c3e50;
+      font-weight: 700;
+      font-size: 22px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .social-login {
+      margin-top: 15px;
+    }
+
+    .social-row {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .social-row button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .social-row button:hover {
+      transform: scale(1.05);
+    }
+
+    /* Stylish backgrounds */
+    .google { 
+      background: linear-gradient(45deg, #db4437, #ff6f61); 
+    }
+    .github { 
+      background: linear-gradient(45deg, #333, #555); 
+    }
+    .facebook { 
+      background: linear-gradient(45deg, #1877f2, #3b5998); 
+    }
+    .twitter { 
+      background: linear-gradient(45deg, #1da1f2, #0d8ddb); 
+    }
+
+    .login-container a {
+      display: block;
+      margin-top: 12px;
+      color: #f09819;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .login-container a:hover {
+      text-decoration: underline;
+    }
+
+    .new-account {
+      margin-top: 15px;
+      font-size: 13px;
+      color: #2c3e50;
+    }
+
+    .new-account a {
+      color: #ff512f;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .new-account a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form>
+      <input type="text" placeholder="Username or Email" required>
+      <input type="password" placeholder="Password" required>
+      <a href="#">Forgot Password?</a>
+    </form>
+
+    <div class="social-login">
+      <!-- Google + GitHub in same row -->
+      <div class="social-row">
+        <button class="google"><i class="fab fa-google"></i></button>
+        <button class="github"><i class="fab fa-github"></i></button>
+      </div>
+
+      <!-- Other login apps row -->
+      <div class="social-row">
+        <button class="facebook"><i class="fab fa-facebook-f"></i></button>
+        <button class="twitter"><i class="fab fa-twitter"></i></button>
+      </div>
+    </div>
+
+    <div class="new-account">
+      New user? <a href="#">Create a New Account</a>
+    </div>
+  </div>
+</body>
+</html>
